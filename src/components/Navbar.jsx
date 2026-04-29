@@ -15,8 +15,8 @@ const Navbar = () => {
   const pathname = usePathname(); 
 
   return (
-    <nav className='sticky top-0 z-50 bg-white shadow-sm'>
-      <div className='max-w-7xl mx-auto p-5 relative flex items-center justify-between'>
+    <nav className='sticky top-0 z-50 bg-[#ffdbdb] shadow-sm'>
+      <div className='max-w-7xl mx-auto p-5 md:px-15 relative flex items-center justify-between'>
         
         <div className='flex items-center gap-3 shrink-0'>
           <Link href="/" className='bg-red-500 rounded-full w-10 h-10 flex items-center justify-center text-white font-bold'>

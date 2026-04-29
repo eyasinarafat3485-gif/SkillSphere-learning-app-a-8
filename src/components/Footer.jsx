@@ -3,10 +3,9 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-10 border-t border-gray-800">
-      <div className="max-w-7xl mx-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-10">
+    <footer className="bg-[#050505] text-gray-300 py-8 border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-5 md:px-15 grid grid-cols-1 md:grid-cols-3 gap-10">
         
-        {/* Contact Info Section */}
         <div>
           <h3 className="text-white text-xl font-bold mb-4 uppercase tracking-wider">Contact Info</h3>
           <ul className="space-y-2 text-sm">
@@ -16,7 +15,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Social Links Section */}
         <div className="flex flex-col items-start md:items-center">
           <h3 className="text-white text-xl font-bold mb-4 uppercase tracking-wider">Social Links</h3>
           <div className="flex gap-5 text-2xl">
@@ -27,7 +25,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Legal Policy Section */}
         <div className="md:text-right">
           <h3 className="text-white text-xl font-bold mb-4 uppercase tracking-wider">Legal</h3>
           <ul className="space-y-2 text-sm">
@@ -41,7 +38,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright Bottom Bar */}
       <div className="max-w-7xl mx-auto px-5 mt-10 pt-5 border-t border-gray-800 text-center text-xs uppercase tracking-widest">
         <p>&copy; {new Date().getFullYear()} SkillSphere. All rights reserved.</p>
       </div>
