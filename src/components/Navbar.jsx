@@ -48,12 +48,12 @@ const Navbar = () => {
         <div className='flex items-center gap-4'>
           <div className="hidden lg:flex gap-2">
             <Link href="/signup">
-              <button className='btn rounded-md font-semibold bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 transition-all'>
+              <button className='btn rounded-md cursor-pointer font-semibold bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 transition-all'>
                 SignUp
               </button>
             </Link>
             <Link href="/signin">
-              <button className='btn rounded-md font-semibold bg-green-500 hover:bg-green-600 text-white px-4 py-2 transition-all'>
+              <button className='btn rounded-md cursor-pointer font-semibold bg-green-500 hover:bg-green-600 text-white px-4 py-2 transition-all'>
                 SignIn
               </button>
             </Link>
