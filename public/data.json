@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch using MERN stack.",
+    "image": "https://i.ibb.co.com/8LpX9Yd/web-dev.jpg",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "Advanced Next.js & TypeScript Masterclass",
+    "instructor": "Sarah Smith",
+    "duration": "15 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Master Server Actions, App Router, and Type Safety in modern web apps.",
+    "image": "https://i.ibb.co.com/mR0vFmH/nextjs.jpg",
+    "category": "Development"
+  },
+  {
+    "id": 3,
+    "title": "Professional UI/UX Design Fundamentals",
+    "instructor": "Ariful Islam",
+    "duration": "12 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "description": "Design stunning user interfaces and experiences with Figma.",
+    "image": "https://i.ibb.co.com/vH9pGqD/ui-ux.jpg",
+    "category": "Design"
+  },
+  {
+    "id": 4,
+    "title": "Mastering Node.js & MongoDB",
+    "instructor": "Michael Chen",
+    "duration": "18 hours",
+    "rating": 4.6,
+    "level": "Intermediate",
+    "description": "Build scalable backend APIs and manage databases efficiently.",
+    "image": "https://i.ibb.co.com/N6mYFzP/nodejs.jpg",
+    "category": "Development"
+  },
+  {
+    "id": 5,
+    "title": "Digital Marketing Strategy 2026",
+    "instructor": "Emily Watson",
+    "duration": "10 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Learn SEO, SEM, and social media growth hacking strategies.",
+    "image": "https://i.ibb.co.com/qR8v7fG/marketing.jpg",
+    "category": "Marketing"
+  },
+  {
+    "id": 6,
+    "title": "Python for Data Science & AI",
+    "instructor": "David Miller",
+    "duration": "25 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "description": "Analyze big data and build machine learning models with Python.",
+    "image": "https://i.ibb.co.com/YTVpS9f/python.jpg",
+    "category": "Data Science"
+  },
+  {
+    "id": 7,
+    "title": "Cybersecurity Essentials for Beginners",
+    "instructor": "James Wilson",
+    "duration": "14 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "description": "Understand network security, ethical hacking, and data protection.",
+    "image": "https://i.ibb.co.com/Bf9ZqfX/security.jpg",
+    "category": "IT & Software"
+  },
+  {
+    "id": 8,
+    "title": "Motion Graphics with Framer Motion",
+    "instructor": "Hussain Ahmed",
+    "duration": "8 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "description": "Bring your React components to life with smooth reveal animations.",
+    "image": "https://i.ibb.co.com/X4VpR9z/animation.jpg",
+    "category": "Design"
+  }
+]

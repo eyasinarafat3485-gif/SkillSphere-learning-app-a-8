@@ -6,4 +6,4 @@ export const authClient = createAuthClient({
 
 export const { signIn, signUp, useSession } = createAuthClient()
 
-// https://skill-sphere-learning-app-a-8.vercel.app
+// https://skill-sphere-learning-app-a-8.vercel.app / http://localhost:3000
