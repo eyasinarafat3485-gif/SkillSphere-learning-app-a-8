@@ -1,8 +1,10 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation'; 
+import { usePathname } from 'next/navigation';
 import { BiMenu, BiX } from 'react-icons/bi';
+import { authClient } from '@/lib/auth-client';
+import { Avatar, Button } from '@heroui/react';
 
 const navLinks = [
   { id: 1, name: "Home", path: "/" },
@@ -11,13 +13,22 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  const userData = authClient.useSession();
+  // console.log(userData);
+  const user = userData.data?.user
+  console.log(user);
+
+  const handleSignOut = async () => {
+    await authClient.signOut();
+  }
+
   const [open, setOpen] = useState(false);
-  const pathname = usePathname(); 
+  const pathname = usePathname();
 
   return (
     <nav className='sticky top-0 z-50 bg-[#485966] shadow-sm'>
       <div className='max-w-7xl mx-auto px-3 py-5 md:px-15 relative flex items-center justify-between'>
-        
+
         <div className='flex items-center gap-3 shrink-0'>
           <Link href="/" className='bg-red-500 rounded-full w-10 h-10 flex items-center justify-center text-white font-bold'>
             SK
@@ -29,14 +40,13 @@ const Navbar = () => {
 
         <ul className='hidden lg:flex items-center gap-8 font-medium absolute left-1/2 -translate-x-1/2'>
           {navLinks.map((link) => {
-            const isActive = pathname === link.path; 
+            const isActive = pathname === link.path;
             return (
               <li key={link.id}>
-                <Link 
+                <Link
                   href={link.path}
-                  className={`text-lg font-bold transition-colors ${
-                    isActive ? 'bg-red-500 p-2 text-white rounded-lg' : 'text-gray-300'
-                  }`}
+                  className={`text-lg font-bold transition-colors ${isActive ? 'bg-red-500 p-2 text-white rounded-lg' : 'text-gray-300'
+                    }`}
                 >
                   {link.name}
                 </Link>
@@ -46,22 +56,37 @@ const Navbar = () => {
         </ul>
 
         <div className='flex items-center gap-4'>
-          <div className="hidden lg:flex gap-2">
-            <Link href="/signup">
-              <button className='btn rounded-md cursor-pointer font-semibold bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 transition-all'>
-                SignUp
-              </button>
-            </Link>
-            <Link href="/signin">
-              <button className='btn rounded-md cursor-pointer font-semibold bg-green-500 hover:bg-green-600 text-white px-4 py-2 transition-all'>
-                SignIn
-              </button>
-            </Link>
-          </div>
+          {!user && <ul>
+            <div className="hidden lg:flex gap-2">
+              <li>
+                <Link href="/signup">
+                  <button className='btn rounded-md cursor-pointer font-semibold bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 transition-all'>
+                    SignUp
+                  </button>
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/signin">
+                  <button className='btn rounded-md cursor-pointer font-semibold bg-green-500 hover:bg-green-600 text-white px-4 py-2 transition-all'>
+                    SignIn
+                  </button>
+                </Link>
+              </li>
+            </div>
+          </ul>}
+          {
+            user && <div className="flex gap-3"><Avatar>
+              <Avatar.Image alt="John Doe" src={user?.image} referrerPolicy="no-referrer" />
+              <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
+            </Avatar>
+              <Button onClick={handleSignOut} className='bg-red-500 rounded-md btn hover:bg-red-600 text-lg font-semibold p-2'>Sign Out</Button>
+            </div>
+          }
 
           <div className='lg:hidden'>
             <button onClick={() => setOpen(!open)} className='text-3xl focus:outline-none'>
-              {open ? <BiX className='text-red-500'/> : <BiMenu className='text-gray-300'/>}
+              {open ? <BiX className='text-red-500' /> : <BiMenu className='text-gray-300' />}
             </button>
           </div>
         </div>
@@ -74,11 +99,10 @@ const Navbar = () => {
             const isActive = pathname === link.path;
             return (
               <li key={link.id} onClick={() => setOpen(false)}>
-                <Link 
+                <Link
                   href={link.path}
-                  className={`block text-base font-medium p-2 rounded-lg transition-colors ${
-                    isActive ? 'text-red-500 bg-red-200 font-bold' : 'text-black hover:bg-red-50 hover:text-red-500'
-                  }`}
+                  className={`block text-base font-medium p-2 rounded-lg transition-colors ${isActive ? 'text-red-500 bg-red-200 font-bold' : 'text-black hover:bg-red-50 hover:text-red-500'
+                    }`}
                 >
                   {link.name}
                 </Link>
