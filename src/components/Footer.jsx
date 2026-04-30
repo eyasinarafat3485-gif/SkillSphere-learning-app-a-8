@@ -43,8 +43,8 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto px-5 mt-12 pt-6 border-t border-red-900/20 text-center text-[10px] uppercase tracking-[0.2em] text-gray-500">
-        <p className='text-gray-300'>&copy; {new Date().getFullYear()} <span className="text-red-900">SkillSphere</span>. All rights reserved.</p>
+      <div className="max-w-7xl mx-auto pt-4 mt-5  border-t border-red-900/20 text-center text-[10px] uppercase tracking-[0.2em] text-gray-500">
+        <p className='text-gray-300'>&copy; {new Date().getFullYear()} <span className="text-red-500 ">SkillSphere</span>. All rights reserved.</p>
       </div>
     </footer>
   );

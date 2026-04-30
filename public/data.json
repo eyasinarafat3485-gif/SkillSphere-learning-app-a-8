@@ -4,8 +4,8 @@
     "title": "Complete Web Development Bootcamp",
     "instructor": "John Doe",
     "duration": "20 hours",
-    "rating": 4.8,
-    "level": "Beginner",
+    "rating": 4.9,
+    "level": "Advanced",
     "description": "Learn full-stack web development from scratch using MERN stack.",
     "image": "https://i.ibb.co.com/8LpX9Yd/web-dev.jpg",
     "category": "Development"
@@ -26,8 +26,8 @@
     "title": "Professional UI/UX Design Fundamentals",
     "instructor": "Ariful Islam",
     "duration": "12 hours",
-    "rating": 4.7,
-    "level": "Beginner",
+    "rating": 4.8,
+    "level": "Advanced",
     "description": "Design stunning user interfaces and experiences with Figma.",
     "image": "https://i.ibb.co.com/vH9pGqD/ui-ux.jpg",
     "category": "Design"
@@ -59,7 +59,7 @@
     "title": "Python for Data Science & AI",
     "instructor": "David Miller",
     "duration": "25 hours",
-    "rating": 4.9,
+    "rating": 4.7,
     "level": "Intermediate",
     "description": "Analyze big data and build machine learning models with Python.",
     "image": "https://i.ibb.co.com/YTVpS9f/python.jpg",
@@ -86,5 +86,16 @@
     "description": "Bring your React components to life with smooth reveal animations.",
     "image": "https://i.ibb.co.com/X4VpR9z/animation.jpg",
     "category": "Design"
+  },
+  {
+    "id": 9,
+    "title": "Mastering React Animations with Framer Motion",
+    "instructor": "Hussain Ahmed",
+    "duration": "12 hours",
+    "rating": 4.6,
+    "level": "Intermediate",
+    "description": "Create stunning, high-performance animations and page transitions in React applications.",
+    "image": "https://i.ibb.co.com/X4VpR9z/framer-motion.jpg",
+    "category": "Development"
   }
 ]
