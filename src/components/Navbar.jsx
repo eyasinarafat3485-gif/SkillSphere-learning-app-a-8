@@ -9,7 +9,7 @@ import { Avatar, Button } from '@heroui/react';
 const navLinks = [
   { id: 1, name: "Home", path: "/" },
   { id: 2, name: "Courses", path: "/courses" },
-  { id: 3, name: "My Profile", path: "/my-profile" },
+  // { id: 3, name: "My Profile", path: "/my-profile" },
 ];
 
 const Navbar = () => {
