@@ -7,7 +7,7 @@ const CourseCard = ({ course }) => {
     console.log(course);
     return (
         <div>
-            <div className='border rounded-xl object-cover p-4 space-y-3 hover:shadow-lg shadow-gray-600'>
+            <div className='border border-gray-700 rounded-xl object-cover p-4 space-y-3 hover:shadow-lg shadow-gray-600'>
                 <Chip className="absolute size-sm animation-duration-initial">{course.level}</Chip>
                 <div className='relative w-full aspect-square'>
                     <Image src={course?.image} fill alt='course.title' className='object-cover rounded-xl hover:-translate-y-1 hover:shadow-lg' />
