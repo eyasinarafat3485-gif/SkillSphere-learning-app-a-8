@@ -23,7 +23,7 @@ const LearningTips = () => {
     ];
     return (
         <section className="my-10 w-[95%] md:w-[90%] mx-auto">
-            <div className="max-w-7xl mx-auto px-5">
+            <div className="max-w-7xl mx-auto">
                 <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-10 text-gray-800">Learning Tips</h2>
                 <div className="grid md:grid-cols-3 gap-8">
                     {tips.map(tip => (

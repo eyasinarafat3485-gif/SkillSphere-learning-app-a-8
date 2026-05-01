@@ -12,10 +12,10 @@ const CourseDetailsPage = async ({ params }) => {
     console.log(course);
 
     return (
-        <div className='my-10 w-[95%] md:w-[85%] mx-auto text-center border border-gray-200 rounded-xl'>
-
-            <div className='  space-y-2'>
-                <Image src={course.image} width={450} height={300} alt='photo.title' className='mt-5 mx-auto rounded-xl' />
+        <div><h1 className='my-10 text-3xl md:text-5xl font-extrabold text-center'>Courses Details Page</h1>
+        <div className='my-10 w-[95%] md:w-[450px] mx-auto text-center border border-gray-200 rounded-xl'>
+            <div className=' space-y-3 '>
+                <Image src={course.image} width={450} height={300} alt='photo.title' className=' mx-auto rounded-xl' />
                 <h1 className='font-bold text-lg'>{course.title}</h1>
                 <p className='text-[14px]'>{course.description}</p>
                 <div className='flex gap-40 justify-center '>
@@ -27,7 +27,7 @@ const CourseDetailsPage = async ({ params }) => {
                     </div>
                     
                 </div>
-                <div className='flex gap-70 justify-center pb-5'>
+                <div className='flex justify-between pb-5 px-4'>
                     <div className='flex gap-2 items-center '>
                         <FaUser className='text-orange-600 cursor-pointer' />
                         <p className='text-xl font-bold'>{course.instructor}</p>
@@ -40,6 +40,7 @@ const CourseDetailsPage = async ({ params }) => {
                 </div>
                 
             </div>
+        </div>
         </div>
     );
 };

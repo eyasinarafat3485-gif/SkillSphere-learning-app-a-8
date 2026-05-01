@@ -13,21 +13,21 @@ const TopInstructors = () => {
     {
       id: 2,
       name: "Sarah Smith",
-      expertise: "UI/UX Designer",
+      expertise: "Next.js Specialist",
       image: "https://i.pravatar.cc/150?u=sarah",
       courses: 5
     },
     {
       id: 3,
       name: "Hussain Ahmed",
-      expertise: "Next.js Specialist",
+      expertise: "UI/UX Designer",
       image: "https://i.pravatar.cc/150?u=hussain",
       courses: 13
     }
   ];
     return (
         <section className="mb-10 w-[95%] md:w-[90%] mx-auto ">
-      <div className="max-w-7xl mx-auto px-5">
+      <div className="max-w-7xl mx-auto ">
         <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-12 text-gray-800">Top Instructors</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {instructors.map(instructor => (
