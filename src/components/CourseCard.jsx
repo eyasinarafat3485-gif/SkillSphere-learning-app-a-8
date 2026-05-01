@@ -1,7 +1,7 @@
-import { Button, Card, Chip } from "@heroui/react";
+import { Button, Chip } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowRight, FaHeart, FaStar, FaUser } from "react-icons/fa";
+import { FaArrowRight, FaStar, FaUser } from "react-icons/fa";
 
 const CourseCard = ({ course }) => {
     console.log(course);

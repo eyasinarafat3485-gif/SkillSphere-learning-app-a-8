@@ -13,6 +13,7 @@ import {
 import Link from "next/link";
 import { FaCheck, FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
+// import toast from 'react-hot-toast';
 
 export default function SignInPage() {
   const onSubmit = async (e) => {
@@ -39,8 +40,28 @@ export default function SignInPage() {
   const handleGoogleSignIn= async()=>{
     await authClient.signIn.social({
       provider: "google",
+      
+      
     })
   }
+  
+
+// const handleGoogleSignIn = async () => {
+//   try {
+//     const res = await authClient.signIn.social({
+//       provider: "google",
+//     });
+
+//     
+//     if (res) {
+//       toast.success("Login done with Google ");
+//     }
+
+//   } catch (error) {
+//     toast.error("Google login failed try again!");
+//     console.error(error);
+//   }
+// };
 
   return (
     <Card className="border mx-auto w-[85%] md:w-100 py-10 my-10">
