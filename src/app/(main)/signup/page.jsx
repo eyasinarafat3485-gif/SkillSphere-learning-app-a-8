@@ -112,7 +112,7 @@ export default function SignUpPage() {
         </TextField>
 
         <div className="flex gap-2">
-          <Button type="submit">
+          <Button type="submit" className='bg-pink-500 hover:bg-pink-400'>
             <FaCheck />
             Sign Up
           </Button>
