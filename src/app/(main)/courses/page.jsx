@@ -21,7 +21,6 @@ const AllCoursesPage = () => {
             });
     }, []);
 
-
     const handleSearch = () => {
         const filtered = courses.filter(course =>
             course.title.toLowerCase().includes(searchQuery.toLowerCase())
