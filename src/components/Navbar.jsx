@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { BiMenu, BiX } from 'react-icons/bi';
 import { authClient } from '@/lib/auth-client';
 import { Avatar, Button } from '@heroui/react';
@@ -14,12 +14,14 @@ const navLinks = [
 
 const Navbar = () => {
   const userData = authClient.useSession();
+  const navigate= useRouter()
 
   const user = userData.data?.user;
   const isLoading = userData.isLoading || userData.isPending;
 
   const handleSignOut = async () => {
     await authClient.signOut();
+    navigate.push('/signin')
   };
 
   const [open, setOpen] = useState(false);
