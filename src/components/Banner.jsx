@@ -4,7 +4,6 @@ import Link from "next/link";
 const Banner = () => {
   return (
     <div className="bg-[url('/banner.webp')] h-[35vh] md:h-[75vh]  bg-cover bg-no-repeat bg-center flex items-center rounded-lg shadow-2xl my-10 w-[95%] md:w-[90%] mx-auto">
-      {/* Overlay */}
       <div className="w-full h-full rounded-lg bg-black/50 flex items-center ">
         <div className=" mx-auto px-6 text-white">
           <h1 className="text-4xl md:text-6xl font-bold text-orange-500 mb-4 max-w-2xl">

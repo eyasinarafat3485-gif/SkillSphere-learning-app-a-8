@@ -44,9 +44,8 @@ const Navbar = () => {
               <li key={link.id}>
                 <Link
                   href={link.path}
-                  className={`text-lg font-bold transition-colors ${
-                    isActive ? 'bg-red-500 p-2 text-white rounded-lg' : 'text-gray-300'
-                  }`}
+                  className={`text-lg font-bold transition-colors ${isActive ? 'bg-red-500 p-2 text-white rounded-lg' : 'text-gray-300'
+                    }`}
                 >
                   {link.name}
                 </Link>
@@ -56,14 +55,11 @@ const Navbar = () => {
         </ul>
 
         <div className='flex items-center gap-4'>
-
           {isLoading ? (
             <div className="flex items-center gap-2">
               <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-            </div>
-          ) : (
+            </div>) : (
             <>
-
               {!user && (
                 <ul className="hidden lg:flex gap-2">
                   <li>
@@ -81,28 +77,21 @@ const Navbar = () => {
                       </button>
                     </Link>
                   </li>
-                </ul>
-              )}
+                </ul>)}
 
-              {user && (
-                <div className="flex items-center gap-3">
-                  <Avatar>
-                    <Avatar.Image
-                      src={user?.image}
-                      referrerPolicy="no-referrer"
-                    />
-                    <Avatar.Fallback>
-                      {user?.name?.[0]}
-                    </Avatar.Fallback>
-                  </Avatar>
+              {user && (<div className="flex items-center gap-3">
+                <Avatar><Avatar.Image src={user?.image}
+                  referrerPolicy="no-referrer" />
+                  <Avatar.Fallback> {user?.name?.[0]}
+                  </Avatar.Fallback>
+                </Avatar>
 
-                  <Button
-                    onClick={handleSignOut}
-                    className='bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 rounded-md'
-                  >
-                    Sign Out
-                  </Button>
-                </div>
+                <Button
+                  onClick={handleSignOut}
+                  className='bg-red-500 hover:bg-red-600 text-white font-semibold px-3 py-2 rounded-md'>Sign Out
+                </Button>
+
+              </div>
               )}
             </>
           )}
@@ -112,7 +101,6 @@ const Navbar = () => {
               {open ? <BiX className='text-red-500' /> : <BiMenu className='text-gray-300' />}
             </button>
           </div>
-
         </div>
 
         <ul className={`
@@ -125,14 +113,12 @@ const Navbar = () => {
               <li key={link.id} onClick={() => setOpen(false)}>
                 <Link
                   href={link.path}
-                  className={`block p-2 rounded-lg ${
-                    isActive ? 'text-red-500 bg-red-100 font-bold' : 'text-black'
-                  }`}
+                  className={`block p-2 rounded-lg ${isActive ? 'text-red-500 bg-red-100 font-bold' : 'text-black'
+                    }`}
                 >
                   {link.name}
                 </Link>
-              </li>
-            );
+              </li>);
           })}
 
           <div className="border-t mt-2 pt-2 flex flex-col gap-2">

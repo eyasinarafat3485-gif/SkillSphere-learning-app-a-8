@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@heroui/react";
 import Image from "next/image";
-
+import { motion } from "motion/react";
 const courses = [
   {
     id: 1,
@@ -35,7 +35,7 @@ const TrendingCourses = () => {
       <div className="max-w-7xl mx-auto">
 
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-800">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-center text-gray-800">
             🔥 Trending Courses
           </h2>
           <p className="text-gray-500 mt-2">
@@ -43,40 +43,47 @@ const TrendingCourses = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <motion.div
+          initial={{ opacity: 0, y: 150 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: false }}
+        >
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
-          {courses.map((course) => (
-            <div
-              key={course.id}
-              className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
-              <div className="relative h-40 overflow-hidden">
-                <Image
-                  src={course.image}
-                  alt={course.title}
-                  fill
-                  className="object-cover group-hover:scale-110 transition duration-300"
-                />
-              </div>
+            {courses.map((course) => (
+              <div
+                key={course.id}
+                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                <div className="relative h-60 overflow-hidden">
+                  <Image
+                    src={course.image}
+                    alt={course.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition duration-300"
+                  />
+                </div>
 
-              <div className="p-4">
-                <h3 className="font-semibold text-lg text-gray-800">
-                  {course.title}
-                </h3>
+                <div className="p-4">
+                  <h3 className="font-semibold text-lg text-gray-800">
+                    {course.title}
+                  </h3>
 
-                <div className="flex justify-between items-center mt-3">
-                  <span className="text-blue-600 font-bold">
-                    {course.price}
-                  </span>
+                  <div className="flex justify-between items-center mt-3">
+                    <span className="text-blue-600 font-bold">
+                      {course.price}
+                    </span>
 
                     <Button className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-sm">
                       View
                     </Button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
 
-        </div>
+          </div>
+        </motion.div>
 
       </div>
     </section>

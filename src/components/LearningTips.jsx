@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import { motion } from "motion/react";
 
 const LearningTips = () => {
     const tips = [
@@ -25,6 +26,12 @@ const LearningTips = () => {
         <section className="my-10 w-[95%] md:w-[90%] mx-auto">
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-10 text-gray-800">Learning Tips</h2>
+                <motion.div
+                          initial={{ opacity: 0, y: 150 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.5, ease: "easeOut" }}
+                          viewport={{ once: false }}
+                        >
                 <div className="grid md:grid-cols-3 gap-8">
                     {tips.map(tip => (
                         <div key={tip.id} className="bg-gray-100 p-8 rounded-2xl shadow-xl border-b-4 border-red-500 hover:shadow-2xl cursor-grab transition-all">
@@ -34,6 +41,7 @@ const LearningTips = () => {
                         </div>
                     ))}
                 </div>
+                </motion.div>
             </div>
         </section>
     );

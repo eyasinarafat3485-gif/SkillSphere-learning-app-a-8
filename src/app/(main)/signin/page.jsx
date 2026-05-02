@@ -44,7 +44,6 @@ export default function SignInPage() {
   };
 
   const handleGoogleSignIn = async () => {
-    // 🔥 FULL URL banabo
     const fullCallbackUrl = `${window.location.origin}${callbackUrl}`;
 
     await authClient.signIn.social({

@@ -17,34 +17,34 @@ import { FaCheck, FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
 
 export default function SignUpPage() {
-  const router= useRouter();
-    
+  const router = useRouter();
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    const name= e.target.name.value;
-    const image= e.target.image.value;
-    const email= e.target.email.value;
-    const password= e.target.password.value;
+    const name = e.target.name.value;
+    const image = e.target.image.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
 
     // console.log(name, image, email, password);
 
-    const {data, error}= await authClient.signUp.email({
-        name, image, email, password
+    const { data, error } = await authClient.signUp.email({
+      name, image, email, password
     })
     if (error) {
-            console.error("Auth Error:", error.message);
-            toast.error(error.message); 
-        }
-         else if(!error){
-            toast.success("Successfully sign up done:", data);
-            router.push("/signin")
-        }
-    console.log({data, error});
-    
+      console.error("Auth Error:", error.message);
+      toast.error(error.message);
+    }
+    else if (!error) {
+      toast.success("Successfully sign up done:", data);
+      router.push("/signin")
+    }
+    console.log({ data, error });
+
 
   };
-  const handleGoogleSignIn= async()=>{
+  const handleGoogleSignIn = async () => {
     await authClient.signIn.social({
       provider: "google",
     })
@@ -119,9 +119,9 @@ export default function SignUpPage() {
         </div>
       </Form>
       <p className='my-2 text-center'>Already have an account? <Link href={'/signin'} className='text-blue-600 font-medium'>Sign In</Link></p>
-      
-            <p className="text-center ">Or</p>
-            <Button onClick={handleGoogleSignIn} className='w-full'><FaGoogle />Sign in with google.</Button>
+
+      <p className="text-center ">Or</p>
+      <Button onClick={handleGoogleSignIn} className='w-full'><FaGoogle />Sign in with google.</Button>
     </Card>
   );
 }
