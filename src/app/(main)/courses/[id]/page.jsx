@@ -5,7 +5,7 @@ import { FaStar, FaUser } from 'react-icons/fa';
 const CourseDetailsPage = async ({ params }) => {
     const { id } = await params;
     console.log(id);
-    const res = await fetch('http://localhost:3000/data.json')
+    const res = await fetch('https://skill-sphere-learning-app-a-8.vercel.app/data.json')
     const courses = await res.json();
 
     const course = courses.find(c => c.id == id);

@@ -20,7 +20,6 @@ const MyProfilePage = () => {
                 <p>{user?.email}</p>
                 <Link href={`/my-profile/update`}>
                 <Button className='bg-red-500 hover:bg-red-600 text-white' variant="secondary"><FaEdit /> Update Profile</Button></Link>
-                {/* <UpdateUserInfo /> */}
             </Card>
         </div>
     );

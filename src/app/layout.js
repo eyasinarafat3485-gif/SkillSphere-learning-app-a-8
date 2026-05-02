@@ -1,8 +1,6 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import { ToastContainer } from "react-toastify";
-// import Navbar from "@/components/Navbar";
-// import Footer from "@/components/Footer";
 
 const outfit = Outfit({
   subsets: ["latin"],

@@ -12,7 +12,7 @@ const AllCoursesPage = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:3000/data.json')
+        fetch('https://skill-sphere-learning-app-a-8.vercel.app/data.json')
             .then(res => res.json())
             .then(data => {
                 setCourses(data);
