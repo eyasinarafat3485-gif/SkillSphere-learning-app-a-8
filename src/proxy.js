@@ -17,7 +17,6 @@ export default async function proxy(request) {
   if (!isLoggedIn && isProtectedRoute) {
     const loginUrl = new URL("/signin", request.url);
 
-    // 🔥 FULL URL send korbo (important)
     loginUrl.searchParams.set(
       "callbackUrl",
       request.nextUrl.pathname + request.nextUrl.search
