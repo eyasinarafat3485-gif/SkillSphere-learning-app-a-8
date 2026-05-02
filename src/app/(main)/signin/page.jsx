@@ -39,14 +39,18 @@ export default function SignInPage() {
     } else {
       toast.success("Login successful");
 
-      router.push(callbackUrl);
+      // 🔥 replace use koro (better UX)
+      router.replace(callbackUrl);
     }
   };
 
   const handleGoogleSignIn = async () => {
+    // 🔥 FULL URL banabo
+    const fullCallbackUrl = `${window.location.origin}${callbackUrl}`;
+
     await authClient.signIn.social({
       provider: "google",
-      callbackURL: callbackUrl, 
+      callbackURL: fullCallbackUrl,
     });
   };
 
