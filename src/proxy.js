@@ -8,7 +8,7 @@ export default async function proxy(request) {
   });
 
   const isLoggedIn = !!session;
-  const protectedRoutes = ["/courses", "/my-profile"];
+  const protectedRoutes = ["/courses", "/my-profile", "/my-profile/update"];
 
   const isProtectedRoute = protectedRoutes.some((route) =>
     request.nextUrl.pathname.startsWith(route)
