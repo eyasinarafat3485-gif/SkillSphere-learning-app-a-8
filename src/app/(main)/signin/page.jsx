@@ -39,8 +39,7 @@ export default function SignInPage() {
     } else {
       toast.success("Login successful");
 
-      // 🔥 replace use koro (better UX)
-      router.replace(callbackUrl);
+      window.location.href = callbackUrl;
     }
   };
 
