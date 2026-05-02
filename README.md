@@ -1,7 +1,7 @@
 # 🌐 Project Name: SkillSphere
 
 ## 🎯 Purpose
-SkillSphere is an online learning platform designed to help users explore and enroll in various courses بسهولة. The main goal of this project is to provide a smooth and user-friendly experience for searching courses, managing profiles, and accessing learning content. It focuses on building a secure authentication system along with a modern UI. Additionally, the platform ensures responsiveness so users can access it from any device without issues.
+SkillSphere is an online learning platform designed to help users explore and enroll in various courses. The main goal of this project is to provide a smooth and user-friendly experience for searching courses, managing profiles, and accessing learning content. It focuses on building a secure authentication system along with a modern UI. Additionally, the platform ensures responsiveness so users can access it from any device without issues.
 
 ---
 
